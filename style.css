@@ -41,5 +41,9 @@ button {
 }
 
 button:hover {
-    background-color: lightgray;
+    opacity: 50%;
+}
+
+.rgb {
+    background-color: lightgreen;
 }

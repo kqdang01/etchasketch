@@ -1,11 +1,25 @@
 const gridButton = document.querySelector(".gridButton");
 const clearButton = document.querySelector(".clearButton");
+const funButton = document.querySelector(".fun");
 const body = document.querySelector("body");
 let boxPerRow = 16;
+let funMode = false;
 
 function changeDivColor()
 {
-    this.style.backgroundColor = "black";
+    if (funMode)
+    {
+        this.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    }
+    else
+    {
+        this.style.backgroundColor = "black";
+    }
+}
+
+function randomColor()
+{
+    return Math.floor(Math.random() * 255);
 }
 
 function setGrid(boxAmount = 16)
@@ -44,3 +58,8 @@ gridButton.onclick = () => {
 };
 
 clearButton.onclick = () => setGrid(boxPerRow);
+
+funButton.onclick = () => {
+    funMode = !funMode;
+    funButton.classList.toggle("rgb");
+}
