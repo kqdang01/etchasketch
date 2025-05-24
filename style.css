@@ -24,6 +24,8 @@ body {
     box-sizing: border-box;
     border: 1px solid black;
     flex: auto;
+    transition-property: background-color;
+    transition-duration: 0.2s;
 }
 
 .buttonContainer {
@@ -32,6 +34,7 @@ body {
 }
 
 button {
+    border: 2px solid black;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 10px;
@@ -41,6 +44,7 @@ button {
 }
 
 button:hover {
+    transform: translateY(-3px);
     opacity: 50%;
 }
 
